@@ -18,7 +18,7 @@
             text-align: center;
         }
         header {
-            background-color: #064420;
+            background-color: rgba(6, 68, 32, 0.9);
             color: white;
             padding: 20px;
             font-size: 1.8em;
@@ -28,6 +28,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            backdrop-filter: blur(5px);
         }
         nav {
             display: flex;
@@ -45,54 +46,51 @@
             text-decoration: underline;
         }
         .hero {
-            background: url('https://source.unsplash.com/1600x900/?garden') no-repeat center;
+            background: url('https://source.unsplash.com/1600x900/?luxury-garden') no-repeat center;
             background-size: cover;
-            height: 60vh;
+            height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: white;
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
             margin-top: 80px;
         }
         .container {
             width: 90%;
-            max-width: 800px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 0;
+            padding: 60px 0;
         }
-        .services {
+        .services, .gallery, .testimonials {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
         }
-        .service-card {
+        .service-card, .testimonial-card {
             background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 250px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            width: 300px;
             transition: transform 0.3s;
         }
-        .service-card:hover {
+        .service-card:hover, .testimonial-card:hover {
             transform: scale(1.05);
         }
-        .gallery {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
         .gallery img {
-            width: 200px;
-            height: 150px;
+            width: 250px;
+            height: 180px;
             border-radius: 10px;
             object-fit: cover;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
         }
         .whatsapp {
             display: inline-block;
@@ -111,9 +109,8 @@
         footer {
             background-color: #064420;
             color: white;
-            padding: 15px;
-            font-size: 0.9em;
-            margin-top: 20px;
+            padding: 20px;
+            font-size: 1em;
         }
     </style>
 </head>
@@ -123,6 +120,7 @@
         <nav>
             <a href="#services">Serviços</a>
             <a href="#gallery">Galeria</a>
+            <a href="#testimonials">Depoimentos</a>
             <a href="#contact">Contato</a>
         </nav>
     </header>
@@ -133,16 +131,23 @@
         <h2>Nossos Serviços</h2>
         <div class="services">
             <div class="service-card">Jardinagem Residencial</div>
-            <div class="service-card">Paisagismo Profissional</div>
-            <div class="service-card">Manutenção de Áreas Verdes</div>
+            <div class="service-card">Paisagismo de Luxo</div>
+            <div class="service-card">Manutenção Premium</div>
         </div>
     </div>
     <div class="container" id="gallery">
         <h2>Galeria de Trabalhos</h2>
         <div class="gallery">
-            <img src="https://source.unsplash.com/200x150/?garden1" alt="Jardim 1">
-            <img src="https://source.unsplash.com/200x150/?garden2" alt="Jardim 2">
-            <img src="https://source.unsplash.com/200x150/?garden3" alt="Jardim 3">
+            <img src="https://source.unsplash.com/250x180/?luxury-garden1" alt="Jardim 1">
+            <img src="https://source.unsplash.com/250x180/?luxury-garden2" alt="Jardim 2">
+            <img src="https://source.unsplash.com/250x180/?luxury-garden3" alt="Jardim 3">
+        </div>
+    </div>
+    <div class="container" id="testimonials">
+        <h2>Depoimentos</h2>
+        <div class="testimonials">
+            <div class="testimonial-card">"Meu jardim ficou espetacular! Trabalho impecável!" - João S.</div>
+            <div class="testimonial-card">"Serviço de alto nível, recomendo muito!" - Maria F.</div>
         </div>
     </div>
     <div class="container" id="contact">
